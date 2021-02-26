@@ -29,6 +29,7 @@
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Autofac" Version="4.2.1" />
     <ProjectReference Include="..\RecipeAdmin.Application.Contracts\RecipeAdmin.Application.Contracts.csproj" />
+    <ProjectReference Include="..\RecipeAdmin.Domain\RecipeAdmin.Domain.csproj" />
     <ProjectReference Include="..\RecipeAdmin.EntityFrameworkCore.DbMigrations\RecipeAdmin.EntityFrameworkCore.DbMigrations.csproj" />
   </ItemGroup>
   
