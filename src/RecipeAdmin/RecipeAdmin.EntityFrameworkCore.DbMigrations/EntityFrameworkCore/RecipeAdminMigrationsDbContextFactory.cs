@@ -16,7 +16,7 @@ namespace RecipeAdmin.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<RecipeAdminMigrationsDbContext>()
-                .UseSqlServer(configuration.GetConnectionString("Default"));
+                .UseMySql(configuration.GetConnectionString("Default"),ServerVersion.FromString("5.7"));
 
             return new RecipeAdminMigrationsDbContext(builder.Options);
         }

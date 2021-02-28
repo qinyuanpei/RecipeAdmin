@@ -1,7 +1,11 @@
-﻿{
+{
   "iisSettings": {
-    "windowsAuthentication": false, 
+    "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/RecipeAdmin.IdentityServer",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "https://localhost:44328",
       "sslPort": 44328
@@ -16,12 +20,12 @@
       }
     },
     "RecipeAdmin.IdentityServer": {
-      "commandName": "Project",
+      "commandName": "IIS",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:44328",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:44328"
     }
   }
 }
