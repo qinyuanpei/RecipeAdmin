@@ -111,6 +111,8 @@ namespace RecipeAdmin
                     options.Authority = configuration["AuthServer:Authority"];
                     options.RequireHttpsMetadata = Convert.ToBoolean(configuration["AuthServer:RequireHttpsMetadata"]);
                     options.Audience = "RecipeAdmin";
+                    if (options.TokenValidationParameters != null)
+                        options.TokenValidationParameters.ValidateIssuer = false;
                 });
         }
 

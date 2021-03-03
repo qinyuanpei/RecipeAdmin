@@ -131,7 +131,7 @@ namespace RecipeAdmin
                         .AllowAnyMethod()
                         .AllowCredentials();
                 });
-            });
+            }); 
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)

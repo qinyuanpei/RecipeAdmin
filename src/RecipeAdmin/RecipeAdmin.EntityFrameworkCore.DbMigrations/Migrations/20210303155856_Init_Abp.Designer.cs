@@ -10,7 +10,7 @@ using Volo.Abp.EntityFrameworkCore;
 namespace RecipeAdmin.Migrations
 {
     [DbContext(typeof(RecipeAdminMigrationsDbContext))]
-    [Migration("20210303133535_Init_Abp")]
+    [Migration("20210303155856_Init_Abp")]
     partial class Init_Abp
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
