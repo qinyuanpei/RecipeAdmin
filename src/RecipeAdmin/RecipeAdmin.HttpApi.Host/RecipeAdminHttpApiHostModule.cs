@@ -124,7 +124,7 @@ namespace RecipeAdmin
                 },
                 options =>
                 {
-                    options.SwaggerDoc("v1", new OpenApiInfo {Title = "RecipeAdmin API", Version = "v1"});
+                    options.SwaggerDoc("v1", new OpenApiInfo { Title = "RecipeAdmin API", Version = "v1" });
                     options.DocInclusionPredicate((docName, description) => true);
                 });
         }
@@ -208,10 +208,10 @@ namespace RecipeAdmin
             app.UseAbpSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "RecipeAdmin API");
-
                 var configuration = context.GetConfiguration();
                 options.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
                 options.OAuthClientSecret(configuration["AuthServer:SwaggerClientSecret"]);
+                options.OAuth2RedirectUrl($"{configuration["App:SelfUrl"]}/swagger/oauth2-redirect.html");
             });
 
             app.UseAuditing();
