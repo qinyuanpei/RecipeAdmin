@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RecipeAdmin.Migrations
 {
-    public partial class Init_Abp : Migration
+    public partial class InitAbp : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

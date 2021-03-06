@@ -28,6 +28,8 @@ using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
 using Volo.Abp.AspNetCore.Mvc.UI.Theming;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
+using System.Net.Http;
+using System.Security.Authentication;
 
 namespace RecipeAdmin
 {
@@ -111,8 +113,12 @@ namespace RecipeAdmin
                     options.Authority = configuration["AuthServer:Authority"];
                     options.RequireHttpsMetadata = Convert.ToBoolean(configuration["AuthServer:RequireHttpsMetadata"]);
                     options.Audience = "RecipeAdmin";
-                    if (options.TokenValidationParameters != null)
-                        options.TokenValidationParameters.ValidateIssuer = false;
+                    options.BackchannelHttpHandler = new HttpClientHandler()
+                    {
+                        ClientCertificateOptions = ClientCertificateOption.Manual,
+                        SslProtocols = SslProtocols.Tls12,
+                        ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+                    };
                 });
         }
 
