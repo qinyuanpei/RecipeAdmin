@@ -118,7 +118,7 @@ namespace RecipeAdmin.IdentityServer
                     new ApiScope(
                         _guidGenerator.Create(),
                         name,
-                        name + " API"
+                        $"{name}.API"
                     ),
                     autoSave: true
                 );
