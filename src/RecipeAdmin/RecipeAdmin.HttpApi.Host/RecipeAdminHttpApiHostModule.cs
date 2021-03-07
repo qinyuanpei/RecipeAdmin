@@ -192,7 +192,7 @@ namespace RecipeAdmin
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseAbpRequestLocalization();
+            app.UseAbpRequestLocalization(options => options.SetDefaultCulture("zh-CN"));
 
             if (!env.IsDevelopment())
             {

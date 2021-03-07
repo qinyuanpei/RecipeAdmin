@@ -60,8 +60,8 @@ namespace RecipeAdmin
                         typeof(AbpUiResource)
                     );
 
-                options.Languages.Add(new LanguageInfo("en", "en", "English"));
-                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
+                options.Languages.Add(new LanguageInfo("en-US", "en-US", "English"));
+                options.Languages.Add(new LanguageInfo("zh-CN", "zh-CN", "简体中文"));
             });
 
             Configure<AbpBundlingOptions>(options =>
@@ -144,7 +144,7 @@ namespace RecipeAdmin
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseAbpRequestLocalization();
+            app.UseAbpRequestLocalization(options => options.SetDefaultCulture("zh-CN"));
 
             if (!env.IsDevelopment())
             {
