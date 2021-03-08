@@ -17,10 +17,5 @@ namespace RecipeAdmin.Identity
 
         }
 
-        public async Task<List<IdentityRoleDto>> GetRolesByText(GetIdentityRolesInput input, string text)
-        {
-            await Task.FromResult(new List<IdentityRoleDto>());
-        }
-
     }
 }
