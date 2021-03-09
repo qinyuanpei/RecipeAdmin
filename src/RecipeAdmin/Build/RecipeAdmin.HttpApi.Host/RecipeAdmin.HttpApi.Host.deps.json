@@ -4296,6 +4296,8 @@
           "Volo.Abp.Account.Application": "4.2.1",
           "Volo.Abp.FeatureManagement.Application": "4.2.1",
           "Volo.Abp.Identity.Application": "4.2.1",
+          "Volo.Abp.Identity.EntityFrameworkCore": "4.2.1",
+          "Volo.Abp.ObjectExtending": "4.2.1",
           "Volo.Abp.PermissionManagement.Application": "4.2.1",
           "Volo.Abp.TenantManagement.Application": "4.2.1"
         },
